@@ -7,13 +7,13 @@ struct Foo {
   pub foo: i32,
 }
 
-humanized_brief_display!(Foo, |var: &Foo| { var.foo.to_string() });
+honeyholt_define_brief!(Foo, |var: &Foo| { var.foo.to_string() });
 
 #[named]
 fn main() {
   init_pretty_env_logger();
   trace_enter!();
   println!("Hello, world!");
-  println!("{}", Foo { foo: 32 }.humanized_brief_display());
+  println!("{}", honeyholt_brief!(Foo { foo: 32 }));
   trace_exit!();
 }
