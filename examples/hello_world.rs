@@ -14,6 +14,6 @@ fn main() {
   init_pretty_env_logger();
   trace_enter!();
   println!("Hello, world!");
-  println!("{}", Foo { foo: 32 }.display_humanized_brief());
+  println!("{}", Foo { foo: 32 }.humanized_brief_display());
   trace_exit!();
 }
