@@ -9,6 +9,8 @@
 pub fn humanize_sphere_by_radius(radius: f64) -> &'static str {
   trace_enter!();
   let result = match radius {
+    radius if radius <= 1.08E21 => "smaller than Earth",
+    radius if radius <= 1.08E48 => "larger than Earth",
     _ => "LOL",
   };
   trace_var!(result);
